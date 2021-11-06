@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def check():
-    return render_template('templates/index.html')
+    return render_template('./templates/index.html')
 
 @app.route('/output', methods=['POST'])
 def output():
