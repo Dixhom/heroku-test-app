@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 from scipy.stats import chi2_contingency
 
-nc = Flask(__name__)
+app = Flask(__name__)
 
 @app.route("/")
 def check():
@@ -26,4 +26,4 @@ def output():
     return jsonify(ResultSet=json.dumps(return_data))
 
 if __name__ == '__main__':
-    nc.run(host="127.0.0.1", port=8080)
+    app.run(host="127.0.0.1", port=8080)
